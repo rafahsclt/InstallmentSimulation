@@ -15,7 +15,9 @@
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "styled-components": "^5.2.1"
+    "react-text-mask": "^5.4.3",
+    "styled-components": "^5.2.1",
+    "text-mask-addons": "^3.8.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.21",

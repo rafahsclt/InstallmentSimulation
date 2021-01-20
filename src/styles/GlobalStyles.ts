@@ -9,7 +9,7 @@ export default createGlobalStyle`
     }
     
     body, html, #__next {
-        background: #f8f8f8;
+        background: #fff;
         color: #777777;
         -webkit-font-smoothing: antialiased;
         height: 100%;

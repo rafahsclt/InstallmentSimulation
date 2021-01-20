@@ -20,4 +20,10 @@ export const HomeContent = styled.main`
         font-size: 40px;
         margin-bottom: 36px;
     }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `

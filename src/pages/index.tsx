@@ -1,9 +1,13 @@
-import YellowButton from '../components/YellowButton'
+import { useState } from 'react'
+
 import Header from '../components/Header'
 import SubHeader from '../components/SubHeader'
+import YellowButton from '../components/YellowButton'
+import Input from '../components/Input'
 import { HomeContainer, HomeContent } from '../styles/pages/HomePage'
 
 const Home:React.FC = () => {
+  const [desiredValue, setDesiredValue] = useState(0)
   return (
     <HomeContainer>
       <Header />
@@ -11,8 +15,13 @@ const Home:React.FC = () => {
       <HomeContent>
         <h2>Valor Desejado</h2>
         <section>
-          <input type="text"/>
-          <YellowButton>Calcular</YellowButton>
+          <Input 
+            kindof="currency" 
+            onChange={v => setDesiredValue(Number(v))}
+          />
+          <YellowButton
+            
+          >Calcular</YellowButton>
         </section>
       </HomeContent>
     </HomeContainer>
