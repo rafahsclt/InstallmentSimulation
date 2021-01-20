@@ -8,10 +8,12 @@ export default createGlobalStyle`
         outline: 0;
     }
     
-    body {
+    body, html, #__next {
         background: #f8f8f8;
         color: #777777;
         -webkit-font-smoothing: antialiased;
+        height: 100%;
+        width: 100%;
     }
     
     body, input, button {
