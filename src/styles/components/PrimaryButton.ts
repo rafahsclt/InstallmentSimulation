@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 interface ButtonProps {
     size: 'small' | 'medium' | 'large'
+    isDisabled: boolean
 }
 
 export const ButtonContainer = styled.button<ButtonProps>`
@@ -20,6 +21,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
     border: none;
     border-radius: 5px;
     background: #228a95;
+    opacity: ${props => props.isDisabled && '0.3'};
 
     color: #fff;
     font-weight: bold;
