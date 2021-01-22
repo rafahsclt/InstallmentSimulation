@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import server from '../../../../server.json'
+import api from '../../../../api.json'
 
 export default function hander(req: NextApiRequest, res: NextApiResponse) {
     if(req.method === 'GET') {
-        res.status(200).json(server.solicitation)
+        res.status(200).json(api.solicitation)
     }
 }

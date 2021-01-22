@@ -10,4 +10,6 @@ export const HeaderContainer = styled.header`
 
     justify-content: center;
     align-items: center;
+
+    z-index: 10;
 `

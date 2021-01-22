@@ -4,10 +4,14 @@ export const SubHeaderContainer = styled.div`
     width: 100%;
     height: 20%;
     margin-top: 60px;
-    padding: 30px 360px;
+    padding: 30px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    position: relative;
+    right: 230px;
 
     img + img {
         margin-left: 52px;
