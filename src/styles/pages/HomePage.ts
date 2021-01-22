@@ -21,9 +21,47 @@ export const HomeContent = styled.main`
         margin-bottom: 36px;
     }
 
+    span {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
     section {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+`
+
+export const Table = styled.table`
+    margin-top: 40px;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+        background: #f8f8f8;
+        font-weight: bold;
+        font-size: 20px;
+
+        th {
+            padding: 10px 20px;
+            text-align: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgba(0,0,0, 0.1)
+        }
+    }
+
+    tbody {
+        font-size: 20px;
+
+        td {
+            padding: 10px 0;
+            text-align: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgba(0,0,0, 0.1)
+        }
     }
 `
