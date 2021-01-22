@@ -5,13 +5,12 @@ interface InputProps {
 }
 
 export const InputContainer = styled.div<InputProps>`
-    width: 473px;
-    height: 53px;
+    width: 350px;
+    height: 61px;
     display: flex;
     background: #f8f8f8;
     align-items: center;
     padding: 5px 20px;
-    margin-right: 10px;
 
     span {
         color: #777777;

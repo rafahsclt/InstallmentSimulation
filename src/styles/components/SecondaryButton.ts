@@ -10,4 +10,6 @@ export const ButtonContainer = styled.button`
     color: #fff;
     font-weight: bold;
     font-size: 20px;
+
+    margin-left: 10px;
 `
