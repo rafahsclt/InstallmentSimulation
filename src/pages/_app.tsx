@@ -1,15 +1,13 @@
 import GlobalStyles from "../styles/GlobalStyles"
-import { Provider } from 'react-redux'
-
-import store from '../store'
+import storeWrapper from '../store/index'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
+    <>
       <GlobalStyles />
       <Component {...pageProps} />
-    </Provider>
+    </>
   )
 }
 
-export default MyApp
+export default storeWrapper.withRedux(MyApp)

@@ -1,36 +1,39 @@
 import { ModalityContainer } from '../styles/pages/Modality'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import Header from '../components/Header'
 import SubHeader from '../components/SubHeader'
-import PrimaryButtonButton from '../components/PrimaryButton'
+import PrimaryButton from '../components/PrimaryButton'
 
-const Modality: React.FC = () => (
-    <ModalityContainer>
-        <Header />
-        <SubHeader />
-        <main>
-            <h2>Escolha a modalidade</h2>
-            <Link href="/card">
-                <PrimaryButtonButton
-                    size="medium"
-                >
-                    Cartão de Crédito
-                    </PrimaryButtonButton>
-            </Link>
-            <h3>Ou</h3>
-            <section>
-                <PrimaryButtonButton
-                    size="medium"
-                    isDisabled
-                >
-                    Crédito Consignado
-                </PrimaryButtonButton>
-                <span>Em breve...</span>
-            </section>
-        </main>
-    </ModalityContainer>
-)
+const Modality: React.FC = () => {
+    const router = useRouter()
+
+    return (
+        <ModalityContainer>
+            <Header />
+            <SubHeader />
+            <main>
+                <h2>Escolha a modalidade</h2>
+                    <PrimaryButton
+                        onClick={() => router.push('/card')}
+                        size="medium"
+                    >
+                        Cartão de Crédito
+                    </PrimaryButton>
+                <h3>Ou</h3>
+                <section>
+                    <PrimaryButton
+                        size="medium"
+                        isDisabled
+                    >
+                        Crédito Consignado
+                </PrimaryButton>
+                    <span>Em breve...</span>
+                </section>
+            </main>
+        </ModalityContainer>
+    )
+}
 
 
 export default Modality

@@ -1,14 +1,33 @@
 import { SubHeaderContainer, Title } from '../styles/components/SubHeader'
+import ConfirmationBox from './ConfirmationBox'
 
 import plusIcon from '../assets/plus-icon.png'
 import archiveIcon from '../assets/archive-icon.png'
 
-const SubHeader:React.FC = () => {
+interface SubHeaderProps {
+    tableVisible?: boolean
+}
+
+const SubHeader: React.FC<SubHeaderProps> = ({ tableVisible = false }) => {
     return (
         <SubHeaderContainer>
-            <img src={plusIcon} alt="Plus-Icon" width={60} height={70} />
-            <img src={archiveIcon} alt="Plus-Icon" width={110} height={120} />
-            <Title>Simulação <br/>de taxas</Title>
+            <div>
+                <img src={plusIcon} alt="Plus-Icon" width={45} height={60} />
+                <img src={archiveIcon} alt="Plus-Icon" width={90} height={110} />
+                <Title>Simulação <br />de taxas</Title>
+            </div>
+            <div />
+            {tableVisible &&
+                <div>
+                    <ConfirmationBox
+                        title="Tabela"
+                        value="Tabela Padrão"
+                        size="small"
+                        backColor="grey"
+                    />
+
+                </div>
+            }
         </SubHeaderContainer>
     )
 }
