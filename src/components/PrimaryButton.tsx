@@ -2,13 +2,17 @@ import { ButtonHTMLAttributes } from 'react'
 import { ButtonContainer } from '../styles/components/PrimaryButton'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-    size: 'small' | 'medium' | 'large'
+    size: 'small' | 'medium' | 'large' | 'low-medium'
+    isDisabled?: boolean
+    revertColor?: boolean
 }
 
-const PrimaryButtonButton: React.FC<ButtonProps> = ({ size, children, ...rest }) => {
+const PrimaryButton: React.FC<ButtonProps> = ({ size, isDisabled, revertColor = false,children, ...rest }) => {
     return (
         <ButtonContainer
             size={size}
+            isDisabled={isDisabled}
+            revertColor={revertColor}
             {...rest}
         >
             {children}
@@ -16,4 +20,4 @@ const PrimaryButtonButton: React.FC<ButtonProps> = ({ size, children, ...rest })
     )
 }
 
-export default PrimaryButtonButton
+export default PrimaryButton

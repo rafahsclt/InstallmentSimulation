@@ -12,4 +12,10 @@ export const HeaderContainer = styled.header`
     align-items: center;
 
     z-index: 10;
+
+    svg {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
 `

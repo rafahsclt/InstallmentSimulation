@@ -11,12 +11,7 @@ export const InputContainer = styled.div<InputProps>`
     background: #f8f8f8;
     align-items: center;
     padding: 5px 20px;
-
-    span {
-        color: #777777;
-        font-size: 24px;
-        margin-right: 7px;
-    }
+    border-radius: 5px;
 
     input {
         background: #f8f8f8;

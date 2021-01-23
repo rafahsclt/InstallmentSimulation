@@ -1,4 +1,5 @@
 import GlobalStyles from "../styles/GlobalStyles"
+import storeWrapper from '../store/index'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,4 +10,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default storeWrapper.withRedux(MyApp)

@@ -1,6 +1,6 @@
 import { FooterContainer } from '../styles/components/Footer'
 import SecondaryButton from './SecondaryButton'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 interface IFooterInfo {
     name: string
@@ -9,17 +9,17 @@ interface IFooterInfo {
 }
 
 const Footer: React.FC<IFooterInfo> = ({ name, installments, installmentValue }) => {
+    const router = useRouter()
     return (
         <FooterContainer>
             <span>Nome: {name}</span>
             <span>Parcelas: {installments}</span>
             <span>Valor da Parcela: {installmentValue}</span>
-
-            <Link href="/client">
-                <SecondaryButton>
-                    Avançar
+            <SecondaryButton
+                onClick={() => router.push('/client')}
+            >
+                Avançar
             </SecondaryButton>
-            </Link>
         </FooterContainer>
     )
 }

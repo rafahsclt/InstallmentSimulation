@@ -5,7 +5,7 @@ import createNumberMask from 'text-mask-addons/dist/createNumberMask'
 import { InputContainer } from '../styles/components/Input'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-    kindof: 'currency' | 'cpf' | 'card'
+    kindof: 'currency' | 'cpf'
 }
 
 const currencyMaskOptions = {
@@ -41,7 +41,7 @@ const Input: React.FC<InputProps> = ({ kindof, size, ...rest }) => {
                 mask={[/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-',/\d/, /\d/]}
                 {...rest}
             />
-            }
+        }
         </InputContainer>
     )
 }
